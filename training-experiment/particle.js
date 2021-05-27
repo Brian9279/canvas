@@ -1,11 +1,12 @@
 class Particle {
     constructor(velX, velY) {
-        this.r = 10;
+        let maxVel = 5;
+        this.r = 60;
         this.x = this.r + (Math.random() * (canvas.width - (this.r * 2)));
         this.y = this.r + (Math.random() * (canvas.height - (this.r * 2)));
         this.border = 4;
-        this.velX = (Math.random() * 100) - 9;
-        this.velY = (Math.random() * 100) - 5;
+        this.velX = (Math.random() * maxVel) - maxVel / 2;
+        this.velY = (Math.random() * maxVel) - maxVel / 2;
         this.fillColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
         this.lineColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
         this.gravity = 0.5;
@@ -14,7 +15,7 @@ class Particle {
 
     update(timeMultiplier) {
 
-        this.velY = this.velY + this.gravity
+        //this.velY = this.velY + this.gravity
 
         const moveX = this.velX * timeMultiplier;
         const moveY = this.velY * timeMultiplier;
@@ -44,6 +45,23 @@ class Particle {
 
         c.stroke();
         c.fill();
+    }
+
+    moveUp() {
+        this.velY -= 10;
+    }
+
+
+    moveDown() {
+        this.velY += 10;
+    }
+
+    moveLeft() {
+        this.velX -= 10;
+    }
+
+    moveRight() {
+        this.velX += 10;
     }
 }
 

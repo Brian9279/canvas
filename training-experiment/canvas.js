@@ -52,7 +52,7 @@ var colorPallet = [
 function init() {
     Particle.list = [];
 
-    for (var i = 0; i < 33; i++) {
+    for (var i = 0; i < 100; i++) {
         new Particle(5, 5);
     }
     intervalFunction(0);
@@ -60,11 +60,17 @@ function init() {
 
 
 function intervalFunction(time) {
+    const fps = Math.floor(1000 / (time - lastTime) * 10) / 10
     const timeMultiplier = Math.min(((time - lastTime) / 16.67), 1);
     lastTime = time;
     c.rect(0, 0, canvas.width, canvas.height);
     c.fillStyle = "rgba(50, 50, 50, 1)";
     c.fill();
+
+
+    c.font = "30px Arial";
+    c.fillStyle = "red";
+    c.fillText((fps, 10, 50);
 
     Particle.list.forEach(particle => {
         particle.update(timeMultiplier);
@@ -79,3 +85,52 @@ var lastTime = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
     init();
 });
+
+document.body.onkeydown = function(e) {
+    switch (e.key) {
+        case ' ':
+            break;
+        case "Down": // IE/Edge specific value
+        case "ArrowDown":
+            moveDownAllParticles();
+            break;
+        case "Up": // IE/Edge specific value
+        case "ArrowUp":
+            moveUpAllParticles();
+            break;
+        case "Left": // IE/Edge specific value
+        case "ArrowLeft":
+            moveLeftAllParticles();
+            break;
+        case "Right": // IE/Edge specific value
+        case "ArrowRight":
+            moveRightAllParticles();
+            break;
+    }
+}
+
+function moveUpAllParticles() {
+    for (var i = 0; i < Particle.list.length; i++) {
+        Particle.list[i].moveUp();
+    }
+}
+
+
+function moveRightAllParticles() {
+    for (var i = 0; i < Particle.list.length; i++) {
+        Particle.list[i].moveRight();
+    }
+}
+
+
+function moveLeftAllParticles() {
+    for (var i = 0; i < Particle.list.length; i++) {
+        Particle.list[i].moveLeft();
+    }
+}
+
+function moveDownAllParticles() {
+    for (var i = 0; i < Particle.list.length; i++) {
+        Particle.list[i].moveDown();
+    }
+}
