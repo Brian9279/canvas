@@ -67,8 +67,10 @@ function intervalFunction(time) {
     frame++;
     if (time - lastPipeTimeStamp > pipeSpawnMs) {
         lastPipeTimeStamp = time;
-        new Pipe();
     }
+
+    new Pipe();
+
     if (frame % 80 === 0) {
     }
     lastTime = time;

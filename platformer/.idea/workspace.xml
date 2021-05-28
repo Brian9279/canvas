@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f96d4cdf-54f7-4264-8e09-937e603fa4df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flappy/bird.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/bird.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../flappy/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flappy/pipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/pipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../training-experiment/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../training-experiment/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstacle.js" beforeDir="false" afterPath="$PROJECT_DIR$/obstacle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../flappy" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -42,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622119818431</updated>
       <workItem from="1622119819451" duration="8093000" />
+      <workItem from="1622185489004" duration="8362000" />
     </task>
     <servers />
   </component>
@@ -49,14 +51,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2337" y="257" width="1639" height="1116" key="CommitChangelistDialog2" timestamp="1622193851145">
+      <screen x="72" y="27" width="5048" height="1413" />
+    </state>
+    <state x="2337" y="257" width="1639" height="1116" key="CommitChangelistDialog2/72.27.5048.1413@72.27.5048.1413" timestamp="1622193851145" />
     <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl" timestamp="1622123210277">
       <screen x="72" y="27" width="5048" height="1413" />
     </state>
     <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl/72.27.5048.1413@72.27.5048.1413" timestamp="1622123210277" />
-    <state x="3686" y="477" width="618" height="522" key="find.popup" timestamp="1622125555660">
+    <state x="3686" y="477" width="618" height="522" key="find.popup" timestamp="1622192531142">
       <screen x="72" y="27" width="5048" height="1413" />
     </state>
-    <state x="3686" y="477" width="618" height="522" key="find.popup/72.27.5048.1413@72.27.5048.1413" timestamp="1622125555660" />
+    <state x="3686" y="477" width="618" height="522" key="find.popup/72.27.5048.1413@72.27.5048.1413" timestamp="1622192531142" />
     <state x="3744" y="412" width="672" height="678" key="search.everywhere.popup" timestamp="1622122037092">
       <screen x="72" y="27" width="5048" height="1413" />
     </state>

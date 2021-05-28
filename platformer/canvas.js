@@ -56,6 +56,8 @@ var colorPallet = [
 // c.stroke();
 let player;
 var score = 0;
+var speed = 5;
+var lastTime = 0;
 
 
 function resetScore() {
@@ -63,16 +65,18 @@ function resetScore() {
 }
 
 function init() {
-    Player.list = [];
+    Obstacle.list = [];
     let r = 50;
     let x = 100;
     let y = canvas.height;
     let borderColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
     let fillColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
     player = new Player(x, y, r, 0, 0, fillColor, borderColor);
+    speed = 5;
+    lastTime = 0;
     new Obstacle();
     intervalFunction(0);
-    resetScore()
+    resetScore();
 }
 
 function intervalFunction(time) {
@@ -101,6 +105,27 @@ function intervalFunction(time) {
         }
     });
     if (player.dead) {
+        c.font = "100px Arial";
+        c.fillStyle = "red";
+        var gameOverText = "GAME OVER";
+        var scoreText = "Finalscore: " + score;
+        var helpText = "Press space to try again -_-"
+        c.fillText(gameOverText, canvas.width / 2 - c.measureText(gameOverText).width / 2, canvas.height / 2);
+        c.font = "30px Arial";
+        c.fillStyle = "red";
+        c.fillText(
+            scoreText,
+            canvas.width / 2 - c.measureText(scoreText).width / 2,
+            canvas.height / 2 + 50
+        );
+        c.font = "40px Arial";
+        c.fillStyle = "green";
+        c.fillText(
+            helpText,
+            canvas.width / 2 - c.measureText(helpText).width / 2,
+            canvas.height / 2 + 150
+        );
+
         return;
     }
     window.requestAnimationFrame((time) => {
@@ -109,20 +134,23 @@ function intervalFunction(time) {
 }
 
 
-var lastTime = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
     init();
 });
 
 document.body.onkeydown = function(e) {
     switch (e.key) {
-        case ' ':
-            break;
         case "Down": // IE/Edge specific value
         case "ArrowDown":
             break;
         case "Up": // IE/Edge specific value
-        case "ArrowUp":
+        // case "ArrowUp":
+        case ' ':
+            if (player.dead) {
+                init();
+            }
+
+        case 'w':
             player.moveUp();
             break;
         case "Left": // IE/Edge specific value
