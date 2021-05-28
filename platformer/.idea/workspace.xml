@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f96d4cdf-54f7-4264-8e09-937e603fa4df" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/../flappy/bird.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/bird.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flappy/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../training-experiment/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../training-experiment/canvas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flappy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -41,7 +44,8 @@
       <option name="presentableId" value="Default" />
       <updated>1622119818431</updated>
       <workItem from="1622119819451" duration="8093000" />
-      <workItem from="1622185489004" duration="11499000" />
+      <workItem from="1622185489004" duration="12743000" />
+      <workItem from="1622208010098" duration="74000" />
     </task>
     <servers />
   </component>
@@ -53,10 +57,10 @@
       <screen x="72" y="27" width="5048" height="1413" />
     </state>
     <state x="2337" y="257" width="1639" height="1116" key="CommitChangelistDialog2/72.27.5048.1413@72.27.5048.1413" timestamp="1622193898986" />
-    <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl" timestamp="1622123210277">
+    <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl" timestamp="1622201771858">
       <screen x="72" y="27" width="5048" height="1413" />
     </state>
-    <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl/72.27.5048.1413@72.27.5048.1413" timestamp="1622123210277" />
+    <state x="3778" y="496" width="424" height="491" key="FileChooserDialogImpl/72.27.5048.1413@72.27.5048.1413" timestamp="1622201771858" />
     <state x="3832" y="585" width="618" height="522" key="find.popup" timestamp="1622194133296">
       <screen x="72" y="27" width="5048" height="1413" />
     </state>

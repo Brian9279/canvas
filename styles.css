@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400;1,500;1,700&display=swap');
+
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+
+    background: linear-gradient(235deg, #082992, #e17cdd, #947eee, #1a3294);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+    color: white;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.text-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.game-cards {
+    display: flex;
+}
+
+.game-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+}
+
+.game-card + .game-card {
+    margin-left: 20px;
+}
+
+.game-card-image {
+    max-width: 100%;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 84%
+    }
+    50% {
+        background-position: 100% 17%
+    }
+    100% {
+        background-position: 0% 84%
+    }
+}

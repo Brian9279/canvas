@@ -68,9 +68,9 @@ function intervalFunction(time) {
     c.fill();
 
 
-    c.font = "30px Arial";
-    c.fillStyle = "red";
-    c.fillText(fps, 10, 50);
+    // c.font = "30px Arial";
+    //c.fillStyle = "red";
+    // c.fillText(fps, 10, 50);
 
     Particle.list.forEach(particle => {
         particle.update(timeMultiplier);

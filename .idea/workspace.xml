@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b1ee174-45ed-4e13-a053-59b1e966d739" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training-experiment/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/training-experiment/canvas.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1t744WgeTICffStwD4xSZvGCyJz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b1ee174-45ed-4e13-a053-59b1e966d739" name="Default Changelist" comment="" />
+      <created>1622106602477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622106602477</updated>
+      <workItem from="1622106603523" duration="5883000" />
+      <workItem from="1622201775263" duration="5079000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1622109457403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622109457403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3522" y="284" width="912" height="911" key="CommitChangelistDialog2" timestamp="1622205904537">
+      <screen x="72" y="27" width="5048" height="1413" />
+    </state>
+    <state x="3522" y="284" width="912" height="911" key="CommitChangelistDialog2/72.27.5048.1413@72.27.5048.1413" timestamp="1622205904537" />
+    <state x="3692" y="510" width="424" height="491" key="FileChooserDialogImpl" timestamp="1622115082831">
+      <screen x="72" y="27" width="5048" height="1413" />
+    </state>
+    <state x="3692" y="510" width="424" height="491" key="FileChooserDialogImpl/72.27.5048.1413@72.27.5048.1413" timestamp="1622115082831" />
+    <state x="3578" y="458" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1622109459303">
+      <screen x="72" y="27" width="5048" height="1413" />
+    </state>
+    <state x="3578" y="458" width="800" height="563" key="Vcs.Push.Dialog.v2/72.27.5048.1413@72.27.5048.1413" timestamp="1622109459303" />
+    <state x="3646" y="398" width="672" height="678" key="search.everywhere.popup" timestamp="1622108966016">
+      <screen x="72" y="27" width="5048" height="1413" />
+    </state>
+    <state x="3646" y="398" width="672" height="678" key="search.everywhere.popup/72.27.5048.1413@72.27.5048.1413" timestamp="1622108966016" />
+  </component>
+</project>
