@@ -66,13 +66,10 @@ function intervalFunction(time) {
     let timeMultiplier = Math.min(((time - lastTime) / 16.67), 1);
     frame++;
     if (time - lastPipeTimeStamp > pipeSpawnMs) {
+        new Pipe();
         lastPipeTimeStamp = time;
     }
 
-    new Pipe();
-
-    if (frame % 80 === 0) {
-    }
     lastTime = time;
     c.rect(0, 0, canvas.width, canvas.height);
     c.fillStyle = "rgba(50, 50, 50, 1)";

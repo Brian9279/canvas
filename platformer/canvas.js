@@ -58,7 +58,7 @@ let player;
 var score = 0;
 var speed = 5;
 var lastTime = 0;
-
+var paused = false
 
 function resetScore() {
     score = 0;
@@ -79,22 +79,63 @@ function init() {
     resetScore();
 }
 
+function clearCanvas() {
+    c.rect(0, 0, canvas.width, canvas.height);
+    c.fillStyle = "rgba(50, 50, 50, 1)";
+    c.fill();
+}
+
+function displayFps(fps) {
+    c.font = "30px Arial";
+    c.fillStyle = "red";
+    c.fillText(fps, 10, 50);
+}
+
+function displayScore() {
+    c.font = "30px Arial";
+    c.fillStyle = "red";
+    c.fillText("Score: " + score, 10, 100);
+}
+
+function displayGameOverText() {
+    var gameOverText = "GAME OVER";
+    var scoreText = "Finalscore: " + score;
+    var helpText = "Press space to try again -_-";
+
+    c.font = "100px Arial";
+    c.fillStyle = "red";
+    c.fillText(gameOverText, canvas.width / 2 - c.measureText(gameOverText).width / 2, canvas.height / 2);
+    c.font = "30px Arial";
+    c.fillStyle = "red";
+    c.fillText(
+        scoreText,
+        canvas.width / 2 - c.measureText(scoreText).width / 2,
+        canvas.height / 2 + 50
+    );
+    c.font = "40px Arial";
+    c.fillStyle = "green";
+    c.fillText(
+        helpText,
+        canvas.width / 2 - c.measureText(helpText).width / 2,
+        canvas.height / 2 + 150
+    );
+}
+
+function displayPauseText() {
+    c.font = "100px Arial";
+    c.fillStyle = "gold";
+    var pausedText = "Press Esc to resume the game";
+    c.fillText(pausedText, canvas.width / 2 - c.measureText(pausedText).width / 2, canvas.height / 2);
+}
+
 function intervalFunction(time) {
     const fps = Math.floor(1000 / (time - lastTime) * 10) / 10
     const timeMultiplier = Math.min(((time - lastTime) / 16.67), 1);
     lastTime = time;
-    c.rect(0, 0, canvas.width, canvas.height);
-    c.fillStyle = "rgba(50, 50, 50, 1)";
-    c.fill();
 
-    c.font = "30px Arial";
-    c.fillStyle = "red";
-    c.fillText(fps, 10, 50);
-
-    c.font = "30px Arial";
-    c.fillStyle = "red";
-    c.fillText("Score: " + score, 10, 100);
-
+    clearCanvas();
+    displayScore();
+    displayFps(fps);
 
     player.update(timeMultiplier);
 
@@ -105,26 +146,12 @@ function intervalFunction(time) {
         }
     });
     if (player.dead) {
-        c.font = "100px Arial";
-        c.fillStyle = "red";
-        var gameOverText = "GAME OVER";
-        var scoreText = "Finalscore: " + score;
-        var helpText = "Press space to try again -_-"
-        c.fillText(gameOverText, canvas.width / 2 - c.measureText(gameOverText).width / 2, canvas.height / 2);
-        c.font = "30px Arial";
-        c.fillStyle = "red";
-        c.fillText(
-            scoreText,
-            canvas.width / 2 - c.measureText(scoreText).width / 2,
-            canvas.height / 2 + 50
-        );
-        c.font = "40px Arial";
-        c.fillStyle = "green";
-        c.fillText(
-            helpText,
-            canvas.width / 2 - c.measureText(helpText).width / 2,
-            canvas.height / 2 + 150
-        );
+        displayGameOverText();
+
+        return;
+    }
+    if (paused) {
+        displayPauseText();
 
         return;
     }
@@ -142,14 +169,22 @@ document.body.onkeydown = function(e) {
     switch (e.key) {
         case "Down": // IE/Edge specific value
         case "ArrowDown":
+
             break;
-        case "Up": // IE/Edge specific value
-        // case "ArrowUp":
+        case "Esc": // IE/Edge specific value
+        case "Escape":
+            if (paused) {
+                paused = false;
+                lastTime = 0;
+                intervalFunction(0);
+            } else {
+                paused = true;
+            }
+            break;
         case ' ':
             if (player.dead) {
                 init();
             }
-
         case 'w':
             player.moveUp();
             break;
