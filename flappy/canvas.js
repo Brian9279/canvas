@@ -56,7 +56,7 @@ let frame = 0;
 var score = 0;
 
 var lastPipeTimeStamp = 0;
-var pipeSpawnMs = 2000;
+var pipeSpawnMs = 3000;
 
 function resetScore() {
     score = 0;
@@ -81,13 +81,13 @@ function intervalFunction(time) {
     c.fillStyle = "red";
     c.fillText("Score: " + score, 10, 50);
 
-    for (let i = 0; i < Pipe.list.length; i++) {
-        Pipe.list[i].update(timeMultiplier);
-        Pipe.list[i].speed = Pipe.list[i].baseSpeed + score;
-        if (Pipe.list[i].collidesWith(bird)) {
+    Pipe.list.forEach(pipe => {
+        pipe.update(timeMultiplier);
+        pipe.speed = pipe.baseSpeed + score;
+        if (pipe.collidesWith(bird)) {
             bird.die();
         }
-    }
+    })
 
     if (bird.dead) {
         resetScore();

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f96d4cdf-54f7-4264-8e09-937e603fa4df" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flappy/bird.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/bird.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flappy/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flappy/canvas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622119818431</updated>
       <workItem from="1622119819451" duration="8093000" />
-      <workItem from="1622185489004" duration="11237000" />
+      <workItem from="1622185489004" duration="11499000" />
     </task>
     <servers />
   </component>
