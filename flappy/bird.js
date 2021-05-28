@@ -2,7 +2,7 @@ class Bird {
     constructor() {
         this.x = 50;
         this.y = canvas.height / 2;
-        this.gravity = 0.2;
+        this.gravity = 0.3;
         this.r = 20;
         this.border = 4;
         this.velX = 0;
@@ -33,7 +33,7 @@ class Bird {
     }
 
     jump() {
-        this.velY -= 10;
+        this.velY = -10;
     }
 
     die() {

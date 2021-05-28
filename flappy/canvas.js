@@ -55,15 +55,21 @@ function init() {
 let frame = 0;
 var score = 0;
 
+var lastPipeTimeStamp = 0;
+var pipeSpawnMs = 2000;
+
 function resetScore() {
     score = 0;
 }
 
 function intervalFunction(time) {
-    const timeMultiplier = Math.min(((time - lastTime) / 16.67), 1);
+    let timeMultiplier = Math.min(((time - lastTime) / 16.67), 1);
     frame++;
-    if (frame % 80 === 0) {
+    if (time - lastPipeTimeStamp > pipeSpawnMs) {
+        lastPipeTimeStamp = time;
         new Pipe();
+    }
+    if (frame % 80 === 0) {
     }
     lastTime = time;
     c.rect(0, 0, canvas.width, canvas.height);
@@ -77,7 +83,8 @@ function intervalFunction(time) {
     c.fillText("Score: " + score, 10, 50);
 
     for (let i = 0; i < Pipe.list.length; i++) {
-        Pipe.list[i].update();
+        Pipe.list[i].update(timeMultiplier);
+        Pipe.list[i].speed = Pipe.list[i].baseSpeed + score;
         if (Pipe.list[i].collidesWith(bird)) {
             bird.die();
         }

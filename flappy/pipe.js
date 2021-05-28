@@ -1,7 +1,9 @@
 class Pipe {
     constructor() {
         this.width = 50;
-        this.x = canvas.width - this.width
+        this.baseSpeed = 5;
+        this.speed = 5;
+        this.x = canvas.width
 
         this.holeSize = (Math.random() * 200) + 100
         this.holePosition = Math.random() * canvas.height;
@@ -11,8 +13,8 @@ class Pipe {
     }
 
     update(timeMultiplier) {
-        if (this.x > 0) {
-            this.x -= 10;
+        if (this.x > -this.width) {
+            this.x -= this.speed * timeMultiplier;
         } else {
             this.remove()
         }

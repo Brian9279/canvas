@@ -1,4 +1,12 @@
 var canvas = document.querySelector("canvas");
+var characterImage = document.getElementById("characterImage");
+var characterImageWidth = 0;
+var characterImageHeight = 0;
+
+characterImage.onload = function() {
+    characterImageWidth = this.width;
+    characterImageHeight = this.height;
+}
 var c = canvas.getContext('2d');
 
 canvas.height = window.innerHeight;
@@ -30,7 +38,6 @@ var colorPallet = [
     'rgba(0, 0, 0, 0.5)'
 ];
 
-
 // colorPallet[Math.floor(Math.random() * colorPallet.length)];
 
 //RECT
@@ -47,17 +54,26 @@ var colorPallet = [
 // c.lineTo(0, 0);
 // c.strokeStyle = "tomato";
 // c.stroke();
+let player;
+var score = 0;
 
 
-function init() {
-    Particle.list = [];
-
-    for (var i = 0; i < 100; i++) {
-        new Particle(5, 5);
-    }
-    intervalFunction(0);
+function resetScore() {
+    score = 0;
 }
 
+function init() {
+    Player.list = [];
+    let r = 50;
+    let x = 100;
+    let y = canvas.height;
+    let borderColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
+    let fillColor = colorPallet[Math.floor(Math.random() * colorPallet.length)];
+    player = new Player(x, y, r, 0, 0, fillColor, borderColor);
+    new Obstacle();
+    intervalFunction(0);
+    resetScore()
+}
 
 function intervalFunction(time) {
     const fps = Math.floor(1000 / (time - lastTime) * 10) / 10
@@ -67,17 +83,29 @@ function intervalFunction(time) {
     c.fillStyle = "rgba(50, 50, 50, 1)";
     c.fill();
 
-
     c.font = "30px Arial";
     c.fillStyle = "red";
     c.fillText(fps, 10, 50);
 
-    Particle.list.forEach(particle => {
-        particle.update(timeMultiplier);
+    c.font = "30px Arial";
+    c.fillStyle = "red";
+    c.fillText("Score: " + score, 10, 100);
+
+
+    player.update(timeMultiplier);
+
+    Obstacle.list.forEach(obstacle => {
+        obstacle.update(timeMultiplier)
+        if (obstacle.collidesWith(player)) {
+            player.die();
+        }
     });
+    if (player.dead) {
+        return;
+    }
     window.requestAnimationFrame((time) => {
         intervalFunction(time);
-    })
+    });
 }
 
 
@@ -92,45 +120,16 @@ document.body.onkeydown = function(e) {
             break;
         case "Down": // IE/Edge specific value
         case "ArrowDown":
-            moveDownAllParticles();
             break;
         case "Up": // IE/Edge specific value
         case "ArrowUp":
-            moveUpAllParticles();
+            player.moveUp();
             break;
         case "Left": // IE/Edge specific value
         case "ArrowLeft":
-            moveLeftAllParticles();
             break;
         case "Right": // IE/Edge specific value
         case "ArrowRight":
-            moveRightAllParticles();
             break;
-    }
-}
-
-function moveUpAllParticles() {
-    for (var i = 0; i < Particle.list.length; i++) {
-        Particle.list[i].moveUp();
-    }
-}
-
-
-function moveRightAllParticles() {
-    for (var i = 0; i < Particle.list.length; i++) {
-        Particle.list[i].moveRight();
-    }
-}
-
-
-function moveLeftAllParticles() {
-    for (var i = 0; i < Particle.list.length; i++) {
-        Particle.list[i].moveLeft();
-    }
-}
-
-function moveDownAllParticles() {
-    for (var i = 0; i < Particle.list.length; i++) {
-        Particle.list[i].moveDown();
     }
 }
