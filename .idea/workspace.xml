@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b1ee174-45ed-4e13-a053-59b1e966d739" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platformer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training-experiment/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/training-experiment/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
       <updated>1622106602477</updated>
       <workItem from="1622106603523" duration="5883000" />
       <workItem from="1622201775263" duration="5079000" />
+      <workItem from="1622208008307" duration="220000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1622109457403</created>
